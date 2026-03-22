@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Marion: 20 Level Quest</title>
+  <link rel="stylesheet" href="/game/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="panel left-panel">
+      <h1>Super Marion</h1>
+      <p class="tag">20 handcrafted-feel platform stages, boss rush moments, animated hero states, coins, stars, secrets, checkpoints, and power-ups.</p>
+      <div class="stats-grid">
+        <div><span>Move</span><strong>A / D</strong></div>
+        <div><span>Jump</span><strong>W / Space</strong></div>
+        <div><span>Dash</span><strong>Shift</strong></div>
+        <div><span>Pause</span><strong>P</strong></div>
+      </div>
+      <button id="startBtn" class="primary-btn">Start Adventure</button>
+      <button id="restartBtn" class="secondary-btn">Restart Run</button>
+    </aside>
+
+    <main class="game-column">
+      <div class="hud">
+        <div>Level <span id="hudLevel">1</span> / 20</div>
+        <div>Lives <span id="hudLives">3</span></div>
+        <div>Coins <span id="hudCoins">0</span></div>
+        <div>Stars <span id="hudStars">0</span></div>
+        <div>Timer <span id="hudTimer">0.0</span>s</div>
+      </div>
+      <canvas id="gameCanvas" width="1280" height="720" aria-label="Super Marion game canvas"></canvas>
+      <div id="overlay" class="overlay visible">
+        <div class="card">
+          <h2 id="overlayTitle">Ready for 20 levels?</h2>
+          <p id="overlayText">Collect coins, avoid hazards, defeat patrol bots, and clear every portal to save the kingdom.</p>
+          <button id="overlayBtn" class="primary-btn">Play</button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="panel right-panel">
+      <h2>Features</h2>
+      <ul>
+        <li>20 escalating levels with unique layouts</li>
+        <li>Animated idle, run, jump, dash, hurt, and power-up states</li>
+        <li>Coins, stars, mushrooms, springs, moving platforms, spikes, and portals</li>
+        <li>Checkpoint saves every 5 levels</li>
+        <li>Final boss portal victory scene</li>
+      </ul>
+      <div class="legend">
+        <div><span class="dot coin"></span> Coin</div>
+        <div><span class="dot star"></span> Star</div>
+        <div><span class="dot enemy"></span> Enemy</div>
+        <div><span class="dot hazard"></span> Hazard</div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/game/game.js"></script>
+</body>
+</html>
